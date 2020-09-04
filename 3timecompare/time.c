@@ -80,60 +80,60 @@ int main(void)
 {
     long timeUse=0;
     struct timeval tvStart,tvEnd;
-    //O(1)²âÊÔ
-	//¼ÇÂ¼¿ªÊ¼Ê±¼ä
+    //O(1)æµ‹è¯•
+	//è®°å½•å¼€å§‹æ—¶é—´
     gettimeofday(&tvStart,NULL);
 	O1swap();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(1) use time = %ld\n",timeUse);
 
-    //O(n)²âÊÔ
+    //O(n)æµ‹è¯•
     gettimeofday(&tvStart,NULL);
 	OnSum();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(n) use time = %ld\n",timeUse);
 
-	//O(n2)²âÊÔ
+	//O(n2)æµ‹è¯•
 	gettimeofday(&tvStart,NULL);
 	OnnCount();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(n2) use time = %ld\n",timeUse);
 
-	//O(n3)²âÊÔ
+	//O(n3)æµ‹è¯•
 	gettimeofday(&tvStart,NULL);
 	OnnnCount();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(n3) use time = %ld\n",timeUse);
 
-	//O(log2n)²âÊÔ
+	//O(log2n)æµ‹è¯•
 	gettimeofday(&tvStart,NULL);
 	OlnSum();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(log2n) use time = %ld\n",timeUse);
 
-	//O(nlog2n)²âÊÔ
+	//O(nlog2n)æµ‹è¯•
 	gettimeofday(&tvStart,NULL);
 	OnlnSum();
-	//¼ÇÂ¼½áÊøÊ±¼ä
+	//è®°å½•ç»“æŸæ—¶é—´
 	gettimeofday(&tvEnd,NULL);
-	//¼ÆËãËùÓÃÊ±¼ä
+	//è®¡ç®—æ‰€ç”¨æ—¶é—´
 	timeUse=(tvEnd.tv_sec*1000*1000+tvEnd.tv_usec)-(tvStart.tv_sec*1000*1000+tvStart.tv_usec);	
     printf("O(nlog2n) use time = %ld\n",timeUse);
-    return ;
+    return 0;
 }
 
