@@ -2,6 +2,8 @@
 #include <string.h>
 #include "find.h"
 
+/*half search的方法输出的number=25 record in table 5 position不正确，建议修改，正确的为 0 position*/
+
 void main()
 {
 	STable sTable;
